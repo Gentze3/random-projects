@@ -1,0 +1,19 @@
+import random
+
+
+def password_generator():
+    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@$%^&*().,?0123456789_-+={}[]?/"
+
+    input_number = input("Please enter the amount of passwords to generate: ")
+    number = int(input_number)
+
+    input_length = input("Please enter the amount of characters in each password: ")
+    length = int(input_length)
+
+    print("Here are your generated passwords: ")
+
+    for i in range(number):
+        passwords = ""
+        for char in range(length):
+            passwords += random.choice(chars)
+        print(passwords)
